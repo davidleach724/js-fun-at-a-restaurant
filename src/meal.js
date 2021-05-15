@@ -19,20 +19,16 @@ function createMenuItem(name, price, type) {
 function addIngredients(toppings, ingredientsArray) {
 
 //Runs through the array and compares toppings with each value in the ingredientsArray
-for (i=0; i<ingredientsArray.length; i) {
-//if toppings is equal to the value of the current index, it will return the array as is
+for (i=0; i<ingredientsArray.length; i++) {
+//if toppings is equal to the value of the current index, it will halt the loop and return the array as is
   if (toppings === ingredientsArray[i]) {
     return ingredientsArray;
-//if it is not equal, it will increase the increment expression and keep going through the loop
-  } else {
-    i++;
   }
 }
 //if the loop finishes and has not found duplicate, thus returned, the topping will be added to the array
 // and then returned
   ingredientsArray.push(toppings);
-
-  return ingredientsArray;
+ return ingredientsArray;
 }
 
 
